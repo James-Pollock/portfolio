@@ -1,6 +1,6 @@
 import React from "react";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
-import "./styles.scss";
+import "./css/styles.min.scss";
 
 
 import Hero from "./Hero";
