@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { MDBContainer, MDBRow, MDBCol } from "mdb-react-ui-kit";
+import { MDBTypography, MDBContainer, MDBRow, MDBCol } from "mdb-react-ui-kit";
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 import Navbar from "./Navbar";
@@ -7,49 +7,49 @@ import Navbar from "./Navbar";
 const navVariants = {
   visible: {
     opacity: 1,
-    y: 0
+    y: 0,
   },
   hidden: {
     opacity: 0,
-    y: -50
-  }
+    y: -50,
+  },
 };
 
 const welcomeVariants = {
   visible: {
     opacity: 1,
-    y:0,
+    y: 0,
     transition: {
-      delayChildren: .3,
-      staggerChildren: .2,
-      when:"beforeChildren",
-      type:'spring',
-      duration:.5,
-      delay:.5
-    }
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
+      when: "beforeChildren",
+      type: "spring",
+      duration: 0.5,
+      delay: 0.5,
+    },
   },
   hidden: {
     opacity: 0,
-    y:-50
-  }
+    y: -50,
+  },
 };
 
 const heroNav = {
   visible: {
     opacity: 1,
     transition: {
-      delayChildren: .1,
-      staggerChildren: .2,
-      when:"beforeChildren",
-      type:'spring',
-      stiffness:200,
-      bounce:300,
-      delay:0
-    }
+      delayChildren: 0.1,
+      staggerChildren: 0.2,
+      when: "beforeChildren",
+      type: "spring",
+      stiffness: 200,
+      bounce: 300,
+      delay: 0,
+    },
   },
   hidden: {
     opacity: 0,
-  }
+  },
 };
 
 const heroNavLinks = {
@@ -58,9 +58,8 @@ const heroNavLinks = {
   },
   hidden: {
     opacity: 0,
-  }
+  },
 };
-
 
 const WelcomeMotionRow = motion(MDBRow);
 
@@ -86,7 +85,7 @@ export default function Hero() {
       </MDBContainer>
 
       <MDBContainer
-        style={{ height: "100vh" }}
+        id="hero"
         className="d-flex flex-column justify-content-center"
       >
         <WelcomeMotionRow
@@ -95,11 +94,9 @@ export default function Hero() {
           initial="hidden"
           className="align-items-center justify-content-center text-center"
         >
-          <MDBCol md="12">
-            <h1 style={{ lineHeight: "10px" }}>Welcome</h1>
-            <p style={{ fontWeight: "200", letterSpacing: "5px" }}>
-              I am a web developer
-            </p>
+          <MDBCol md="12 mb-4">
+            <MDBTypography variant="display-1" style={{lineHeight: "10px"}}>Howdy</MDBTypography>
+            <MDBTypography variant="h4">I'm James and front end web developer</MDBTypography>
           </MDBCol>
           <MDBCol
             ref={ref}
@@ -109,37 +106,17 @@ export default function Hero() {
             animate="visible"
             className="hero-links"
           >
-            <motion.a
-              variants={heroNavLinks}
-              style={{ color: "#82F87E" }}
-              className="p-2"
-              href="#about"
-            >
-              ABOUT
+            <motion.a variants={heroNavLinks} href="#about">
+              About
             </motion.a>
-            <motion.a
-              variants={heroNavLinks}
-              style={{ color: "#82F87E" }}
-              className="p-2"
-              href="#projects"
-            >
-              PROJECTS
+            <motion.a variants={heroNavLinks} href="#projects">
+              Projects
             </motion.a>
-            <motion.a
-              variants={heroNavLinks}
-              style={{ color: "#82F87E" }}
-              className="p-2"
-              href="#resume"
-            >
-              RESUME
+            <motion.a variants={heroNavLinks} href="#resume">
+              Resume
             </motion.a>
-            <motion.a
-              variants={heroNavLinks}
-              style={{ color: "#82F87E" }}
-              className="p-2"
-              href="#contact"
-            >
-              CONTACT
+            <motion.a variants={heroNavLinks} href="#contact">
+              Contact
             </motion.a>
           </MDBCol>
         </WelcomeMotionRow>

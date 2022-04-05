@@ -1,25 +1,16 @@
 import { useEffect } from "react";
-import { MDBContainer, MDBRow, MDBCol } from "mdb-react-ui-kit";
+import { MDBContainer, MDBRow, MDBCol, MDBIcon } from "mdb-react-ui-kit";
 
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 
 const variants = {
   visible: {
-    transform: "skew(0deg, 0deg)",
-    scale: 1,
-    height: "100%",
-    transition: {
-      type: "spring",
-      stiffness: 200,
-      duration: 1
-    }
+    opacity: 1,
   },
   hidden: {
-    // transform: "skew(-15deg, -15deg)",
-    height: "3px"
-    // scale:.5
-  }
+    opacity: 0,
+  },
 };
 
 export default function About() {
@@ -36,50 +27,57 @@ export default function About() {
 
   return (
     <MDBContainer id="about" className="py-5 my-5 position-relative">
-      <h2 className="text-center">About James Pollock</h2>
-      <hr />
+      <h2 className="text-center">My Story</h2>
       <MDBRow className="text-light">
-        <MDBCol lg="9">
+        <MDBCol lg="12">
           <MDBRow>
             <MDBCol>
-              <div className="w-100 text-center">
+              <div className="w-100">
                 <img
-                  alt=""
+                  alt="My profile picture"
                   className="img-fluid float-sm-start mx-auto me-4 mb-3"
                   src="james.jpg"
                 />
               </div>
               <p className="mt-0">
-                Column breaks Breaking columns to a new line in flexbox requires
-                a small hack: add an element with width: 100% wherever you want
-                to wrap your columns to a new line. Normally this is
-                accomplished with multiple s, but not every implementation
-                method can account for this.
+                My love for technology started in the early 90's, and gaming was
+                the gateway drug. If you havent experienced a first person
+                shooter on a 56k modem, it is hard to appreciate what a marvel
+                the modern day web is.
               </p>
               <p>
-                Column breaks Breaking columns to a new line in flexbox requires
-                a small hack: add an element with width: 100% wherever you want
-                to wrap your columns to a new line. Normally this is
-                accomplished with multiple s, but not every implementation
-                method can account for this.
+                I started learning html and css around 2004 while attending
+                college at Texas A&M Kingsville. Shortly after graduation I was
+                hired in the department of Special Programs where I put some of
+                what I learned into action. My first real gig!
               </p>
               <img
-                alt=""
+                alt="Me baiting a hook at the peir"
                 className="float-end my-2 ms-4 img-fluid w-50"
                 src="fishing.jpg"
               />
               <p>
-                Column breaks Breaking columns to a new line in flexbox requires
-                a small hack: add an element with width: 100% wherever you want
-                to wrap your columns to a new line. Normally this is
-                accomplished with multiple s, but not every implementation
-                method can account for this.
+                In 2010 I was given a larger share of websites to manage, and
+                also run the campus ID card program. An invaluable experience!
+                This position sharpened both my technical and creative
+                abilities.
+              </p>
+              <p>
+                8 years later...the University was in the process of redesigning
+                the website and I was thankfully given the opportunity to join
+                the web team. While mindnumbingly stressfull at times, this was
+                the most valuable experience in many ways.
+              </p>
+              <p>
+                Many sleepless nights, pots of coffee, and failures but I'm
+                always jonesing for more!
               </p>
             </MDBCol>
           </MDBRow>
         </MDBCol>
+        {/*
         <MDBCol lg="3">
-          <MDBRow className="flex-lg-column">
+        <MDBRow className="flex-lg-column">
             <MDBCol>
               <motion.div
                 ref={ref}
@@ -92,14 +90,15 @@ export default function About() {
                   className="my-2 img-fluid"
                   id="sniggs"
                   src="SNIGGS.png"
-                />
-              </motion.div>
-            </MDBCol>
-            <MDBCol>
-              <img alt="" className="my-2 img-fluid" id="bud" src="bud.png" />
-            </MDBCol>
-          </MDBRow>
-        </MDBCol>
+                  />
+                  </motion.div>
+                  </MDBCol>
+                  <MDBCol>
+                  <img alt="" className="my-2 img-fluid" id="bud" src="bud.png" />
+                  </MDBCol>
+                  </MDBRow>
+                  </MDBCol>
+                */}
       </MDBRow>
     </MDBContainer>
   );

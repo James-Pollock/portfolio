@@ -3,7 +3,7 @@ import {
   MDBRow,
   MDBCol,
   MDBBtn,
-  MDBIcon
+  MDBIcon,
 } from "mdb-react-ui-kit";
 export default function Footer() {
   return (
@@ -20,7 +20,7 @@ export default function Footer() {
             className="d-flex p-4 border-5 rounded flex-column"
           >
             <h2 className="text-center">Contact</h2>
-            <label name="name">Name</label>
+            <label name="name">Names</label>
             <input type="text" />
             <label name="email">Email</label>
             <input type="text" />
