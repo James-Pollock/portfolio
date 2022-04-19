@@ -12,8 +12,8 @@ export default function App() {
   return (
     <>
       <Hero />
-      <Projects />
       <About />
+      <Projects />
       <Footer />
     </>
   );

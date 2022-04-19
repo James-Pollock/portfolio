@@ -80,23 +80,29 @@ export default function Hero() {
       <Navbar variants={navVariants} animate={controls} initial="hidden" />
 
       <MDBContainer fluid>
-        <div className="title">James</div>
-        <div className="title-2">Pollock</div>
+        <div className="title">Pollock</div>
+        <div className="title-2">James</div>
       </MDBContainer>
 
       <MDBContainer
         id="hero"
         className="d-flex flex-column justify-content-center"
+        fluid
       >
         <WelcomeMotionRow
           variants={welcomeVariants}
           animate="visible"
           initial="hidden"
           className="align-items-center justify-content-center text-center"
+          id="hero-wrapper"
         >
           <MDBCol md="12 mb-4">
-            <MDBTypography variant="display-1" style={{lineHeight: "10px"}}>Howdy</MDBTypography>
-            <MDBTypography variant="h4">I'm James and front end web developer</MDBTypography>
+            <MDBTypography variant="display-1" style={{ lineHeight: "10px" }}>
+              Howdy
+            </MDBTypography>
+            <MDBTypography variant="h4">
+              I'm James and front end web developer
+            </MDBTypography>
           </MDBCol>
           <MDBCol
             ref={ref}

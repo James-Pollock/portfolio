@@ -4,9 +4,9 @@ import Layouts from './Layouts'
 
 export default function Projects() {
   return (
-    <MDBContainer id="projects" fluid className="bg-light py-5">
+    <MDBContainer id="projects" fluid className="bg-light py-4">
       <MDBContainer className="position-relative">
-        <h2 className="text-dark text-center">Latest Projects</h2>
+        <h2 className="text-dark text-center">Projects</h2>
         <MDBRow className="rounded text-dark bg-light align-items-center">
           <MDBCol md="6">
             <h3>Shopping Cart App</h3>
@@ -36,7 +36,7 @@ export default function Projects() {
             </MDBCol>
           <MDBCol md="6">
             <h3>Color Theme Sandbox</h3>
-            <p>
+            <p className="text-muted">
               This app allows you to mix and match color combinations and test
               them on page elements.
             </p>
