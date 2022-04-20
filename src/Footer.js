@@ -11,7 +11,7 @@ export default function Footer() {
       <MDBContainer
         id="contact"
         fluid
-        className="position-relative d-flex justify-content-center align-items-center"
+        className="position-relative vh-100 d-flex justify-content-center align-items-center"
       >
         {
           // <div className="title">Pollock</div>
