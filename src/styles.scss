@@ -1,3 +1,4 @@
+
 /* ------ The Mixin ------ */
 @mixin typography($font-size) {
   $base-line-height: $font-size * $ratio;
@@ -9,9 +10,9 @@
   }
 
   .title,
-  .title-2 {
-    font-size: (((((($font-size * $ratio) * $ratio) * $ratio) * $ratio) * $ratio));
-    line-height: ($font-size * $ratio) * 6 !important;
+  .title-2,#brand {
+    font-size: (($font-size * $ratio) * $ratio) ;
+    // line-height: ($font-size * $ratio) * 6 !important;
     margin-top: $margin;
     margin-bottom: $margin;
   }
@@ -104,6 +105,7 @@ $ratio: 1.618;
 
 /* ------ Demo styles ------ */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 
 p,
 ul,
@@ -162,6 +164,17 @@ body {
   z-index: 1
 }
 
+#brand{
+font-family: 'Orbitron',
+sans-serif;
+position:absolute;
+top: 0;
+left:20px;
+color:#fff;
+text-shadow: 1px 1px 10px #000000;
+opacity: 0.1;
+}
+
 .title {
   writing-mode: vertical-rl;
   text-align: center;
@@ -215,7 +228,6 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.55);
   padding: 1rem;
 }
-
 #projects {
   a {
     img {
@@ -232,7 +244,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  z-index: -2;
   position: relative;
 }
 

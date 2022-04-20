@@ -84,10 +84,13 @@ export default function Hero() {
 
   return (
     <>
-      <Navbar variants={navVariants} animate={controls} initial="hidden" />
+      <MDBContainer className="vh-100" style={{ position: 'absolute', top: 0, left:0}}>
+      <div id="brand">JPWeb.Tech</div>
+      </MDBContainer>
+    <Navbar variants={navVariants} animate={controls} initial="hidden" />
       <MDBContainer
         id="hero"
-        className="d-flex flex-column justify-content-center"
+        className="d-flex position-relative flex-column justify-content-center"
         fluid
       >
         <WelcomeMotionRow

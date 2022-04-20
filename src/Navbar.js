@@ -8,13 +8,14 @@ import {
   MDBNavbarItem,
   MDBNavbarLink,
   MDBNavbarNav,
-  MDBIcon
+  MDBIcon,
+  MDBNavbarBrand,
 } from "mdb-react-ui-kit";
 
 const MotionComponent = motion(MDBNavbar);
 
 export default function Navbar(props) {
-  const [showNavLeft, setShowNavLeft] = useState(false);
+  const [showNavRight, setShowNavRight] = useState(false);
 
   return (
     <>
@@ -28,16 +29,21 @@ export default function Navbar(props) {
         sticky
       >
         <MDBContainer>
+          <MDBNavbarBrand href="#" style={{fontFamily: "'Orbitron',sans-serif",color: 'rgb(130, 248, 126)'}}>
+            JPWeb.Tech
+          </MDBNavbarBrand>
           <MDBNavbarToggler
             type="button"
+            data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02"
             aria-expanded="false"
             aria-label="Toggle navigation"
-            onClick={() => setShowNavLeft(!showNavLeft)}
+            onClick={() => setShowNavRight(!showNavRight)}
           >
             <MDBIcon icon="bars" fas />
           </MDBNavbarToggler>
-          <MDBCollapse navbar show={showNavLeft}>
-            <MDBNavbarNav>
+          <MDBCollapse navbar show={showNavRight}>
+            <MDBNavbarNav right fullWidth={false} className="mb-2 mb-lg-0">
               <MDBNavbarItem>
                 <MDBNavbarLink href="#projects">Projects</MDBNavbarLink>
               </MDBNavbarItem>

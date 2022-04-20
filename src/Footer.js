@@ -16,7 +16,6 @@ export default function Footer() {
         {
           // <div className="title">Pollock</div>
           // <div className="title-2">James</div>
-          
       }  
       
         <MDBContainer>
