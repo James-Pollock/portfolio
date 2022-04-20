@@ -28,18 +28,18 @@ export default function About() {
 
   return (
     <MDBContainer fluid id="about" className="bg-light position-relative pt-4">
-      <h2 className="text-center text-dark">
+      <h2 className="text-center display-1 text-dark">
         About
       </h2>
       <MDBRow>
         <MDBCol>
-          <MDBContainer className="small text-dark pb-4 ">
+          <MDBContainer className="small text-muted pb-4 ">
             <MDBRow>
               <MDBCol>
                 <div className="w-100 text-center">
                   <img
                     alt="My profile picture"
-                    className="img-fluid float-sm-start float-none mx-auto mb-4 me-sm-4 mb-sm-2"
+                    className="img-fluid rounded-9 float-sm-start float-none mx-auto mb-4 me-sm-4 mb-sm-2"
                     src="james.jpg"
                   />
                 </div>

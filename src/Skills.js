@@ -4,14 +4,14 @@ import { MDBContainer, MDBRow, MDBCol } from "mdb-react-ui-kit";
 export default function Skills() {
   return (
     <>
-    <MDBCol id="skills" size="12">
-    <MDBContainer className="py-4">
-    <h2 className="text-center">SKILLS</h2>
-    <hr />
-    <MDBRow>
+      <MDBCol id="skills" size="12">
+        <MDBContainer className="pb-5">
+          <h2 className="text-center display-1">SKILLS</h2>
+          <MDBRow>
+            <hr />
             <MDBCol size="6" md="3">
-              <h4 className="h3 ">Front-End</h4>
-              <ul className="mt-4 small">
+              <h4 className="h3">Front-End</h4>
+              <ul className="my-4">
                 <li>
                   HTML <i class="fab fa-html5"></i>
                 </li>
@@ -35,7 +35,7 @@ export default function Skills() {
             </MDBCol>
             <MDBCol size="6" md="3">
               <h4 className="h3 ">Back-End</h4>
-              <ul className="mt-4 small">
+              <ul className="mt-4">
                 <li>Velocity MVC Template Engine</li>
                 <li>Rest API</li>
                 <li>JSON</li>
@@ -47,7 +47,7 @@ export default function Skills() {
             </MDBCol>
             <MDBCol size="6" md="3">
               <h4 className="h3 ">Applications</h4>
-              <ul className="mt-4 small">
+              <ul className="mt-4">
                 <li>Adobe Photoshop</li>
                 <li>Illustrator</li>
                 <li>InDesign</li>
@@ -59,17 +59,18 @@ export default function Skills() {
             </MDBCol>
             <MDBCol size="6" md="3">
               <h4 className="h3 ">CMS and ADA Tools</h4>
-              <ul className="mt-4 small">
+              <ul className="mt-4">
                 <li>Cascade CMS &amp; Clive</li>
                 <li>Site Improve</li>
                 <li>WebAim</li>
                 <li>AXE</li>
                 <li>Google Analytics</li>
               </ul>
-              </MDBCol>
-              </MDBRow>
-              </MDBContainer>
-        </MDBCol>
+            </MDBCol>
+            <hr />
+          </MDBRow>
+        </MDBContainer>
+      </MDBCol>
     </>
   );
 }

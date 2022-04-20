@@ -29,7 +29,7 @@ export default function App() {
       <MDBBtn
               className="m-2"
               color="link"
-        style={{ height: "300px", width: "300px", overflow: "hidden" }}
+        style={{ height: "300px", maxWidth: "300px", overflow: "hidden" }}
         onClick={() => {
             setVaryingModal(!varyingModal);
             setVaryingImage("l1.png");
@@ -40,7 +40,7 @@ export default function App() {
           <MDBBtn
               color="link"
         className="m-2"
-        style={{ height: "300px", width: "300px", overflow: "hidden" }}
+        style={{ height: "300px", maxWidth: "300px", overflow: "hidden" }}
         onClick={() => {
             setVaryingImage("l2.png");
             setVaryingModal(!varyingModal);

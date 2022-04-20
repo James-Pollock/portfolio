@@ -1,5 +1,11 @@
 import { useEffect } from "react";
-import { MDBTypography, MDBContainer, MDBRow, MDBCol } from "mdb-react-ui-kit";
+import {
+  MDBTypography,
+  MDBBtn,
+  MDBContainer,
+  MDBRow,
+  MDBCol,
+} from "mdb-react-ui-kit";
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 import Navbar from "./Navbar";
@@ -62,6 +68,7 @@ const heroNavLinks = {
 };
 
 const WelcomeMotionRow = motion(MDBRow);
+const HeroBtn = motion(MDBBtn);
 
 export default function Hero() {
   const [ref, inView] = useInView();
@@ -78,12 +85,6 @@ export default function Hero() {
   return (
     <>
       <Navbar variants={navVariants} animate={controls} initial="hidden" />
-
-      <MDBContainer fluid>
-        <div className="title">Pollock</div>
-        <div className="title-2">James</div>
-      </MDBContainer>
-
       <MDBContainer
         id="hero"
         className="d-flex flex-column justify-content-center"
@@ -96,34 +97,77 @@ export default function Hero() {
           className="align-items-center justify-content-center text-center"
           id="hero-wrapper"
         >
-          <MDBCol md="12 mb-4">
-            <MDBTypography variant="display-1" style={{ lineHeight: "10px" }}>
-              Howdy
-            </MDBTypography>
-            <MDBTypography variant="h4">
-              I'm James and front end web developer
-            </MDBTypography>
-          </MDBCol>
-          <MDBCol
-            ref={ref}
-            md="12"
-            variants={heroNav}
-            initial="hidden"
-            animate="visible"
-            className="hero-links"
-          >
-            <motion.a variants={heroNavLinks} href="#about">
-              About
-            </motion.a>
-            <motion.a variants={heroNavLinks} href="#projects">
-              Projects
-            </motion.a>
-            <motion.a variants={heroNavLinks} href="#resume">
-              Resume
-            </motion.a>
-            <motion.a variants={heroNavLinks} href="#contact">
-              Contact
-            </motion.a>
+          <MDBCol>
+            <MDBRow className="justify-content-center align-items-center">
+              <MDBCol size="12" lg="6" className="mb-4">
+                <MDBTypography
+                  style={{
+                    fontSize: "5rem",
+                    fontWeight: "bold",
+                    lineHeight: "5rem",
+                    margin: "4px 0px",
+                    padding: "4px 0px",
+                  }}
+                >
+                  I'm James
+                </MDBTypography>
+                <MDBTypography
+                  style={{
+                    fontSize: "2.5rem",
+                    fontWeight: "300",
+                    lineHeight: "5rem",
+                    margin: "4px 0px",
+                    padding: "4px 0px",
+                  }}
+                >
+                  A Front End Web Designer
+                </MDBTypography>
+              </MDBCol>
+              <MDBCol
+                size="12"
+                lg="6"
+                ref={ref}
+                variants={heroNav}
+                initial="hidden"
+                animate="visible"
+                className="hero-links"
+              >
+                <div class="d-grid gap-4 d-sm-block mx-auto">
+                  <HeroBtn
+                    color="light"
+                    className="rounded-0 mx-2"
+                    variants={heroNavLinks}
+                    href="#about"
+                  >
+                    About
+                  </HeroBtn>
+                  <HeroBtn
+                    color="light"
+                    className="rounded-0 mx-2"
+                    variants={heroNavLinks}
+                    href="#projects"
+                  >
+                    Projects
+                  </HeroBtn>
+                  <HeroBtn
+                    color="light"
+                    className="rounded-0 mx-2"
+                    variants={heroNavLinks}
+                    href="#resume"
+                  >
+                    Resume
+                  </HeroBtn>
+                  <HeroBtn
+                    color="light"
+                    className="rounded-0 mx-2"
+                    variants={heroNavLinks}
+                    href="#contact"
+                  >
+                    Contact
+                  </HeroBtn>
+                </div>
+              </MDBCol>
+            </MDBRow>
           </MDBCol>
         </WelcomeMotionRow>
       </MDBContainer>
