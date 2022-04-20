@@ -17,7 +17,7 @@ const navVariants = {
   },
   hidden: {
     opacity: 0,
-    y: -50,
+    y: -150,
   },
 };
 
@@ -84,9 +84,7 @@ export default function Hero() {
 
   return (
     <>
-      <MDBContainer className="vh-100" style={{ position: 'absolute', top: 0, left:0}}>
-      <div id="brand">JPWeb.Tech</div>
-      </MDBContainer>
+     
     <Navbar variants={navVariants} animate={controls} initial="hidden" />
       <MDBContainer
         id="hero"
@@ -108,8 +106,6 @@ export default function Hero() {
                     fontSize: "5rem",
                     fontWeight: "bold",
                     lineHeight: "5rem",
-                    margin: "4px 0px",
-                    padding: "4px 0px",
                   }}
                 >
                   I'm James
@@ -119,8 +115,6 @@ export default function Hero() {
                     fontSize: "2.5rem",
                     fontWeight: "300",
                     lineHeight: "5rem",
-                    margin: "4px 0px",
-                    padding: "4px 0px",
                   }}
                 >
                   A Front End Web Designer
@@ -135,34 +129,38 @@ export default function Hero() {
                 animate="visible"
                 className="hero-links"
               >
-                <div class="d-grid gap-4 d-sm-block mx-auto">
+                <div class="d-md-block d-grid gap-0 col-md-12 col-7 mx-auto">
                   <HeroBtn
-                    color="light"
-                    className="rounded-0 mx-2"
+                    color="white"
+                    size="lg"
+                    className="rounded-0 m-2"
                     variants={heroNavLinks}
                     href="#about"
                   >
                     About
                   </HeroBtn>
                   <HeroBtn
-                    color="light"
-                    className="rounded-0 mx-2"
+                    color="white"
+                    size="lg"
+                    className="rounded-0 m-2"
                     variants={heroNavLinks}
                     href="#projects"
                   >
                     Projects
                   </HeroBtn>
                   <HeroBtn
-                    color="light"
-                    className="rounded-0 mx-2"
+                    color="white"
+                    size="lg"
+                    className="rounded-0 m-2"
                     variants={heroNavLinks}
                     href="#resume"
                   >
                     Resume
                   </HeroBtn>
                   <HeroBtn
-                    color="light"
-                    className="rounded-0 mx-2"
+                    color="white"
+                    size="lg"
+                    className="rounded-0 m-2"
                     variants={heroNavLinks}
                     href="#contact"
                   >

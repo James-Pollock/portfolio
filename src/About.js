@@ -37,7 +37,7 @@ export default function About() {
         <h2 className="text-center display-1 text-dark">About</h2>
         <MDBRow>
           <MDBCol>
-            <MDBContainer className="small text-muted pb-4 ">
+            <MDBContainer className="text-muted pb-4 ">
               <MDBRow>
                 <MDBCol>
                   <div className="w-100 text-center">
