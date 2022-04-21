@@ -20,10 +20,6 @@ export default function Footer() {
     setFormValue({ ...formValue, [e.target.name]: e.target.value });
   };
 
-  const submitForm = (e) => {
-    console.log(formValue)
-  }
-
   return (
     <>
       <MDBContainer
@@ -77,7 +73,6 @@ export default function Footer() {
                 type="submit"
                 size="lg"
                 className="mb-4"
-                onClick={submitForm}
                 block
               >
                 Send &nbsp;
