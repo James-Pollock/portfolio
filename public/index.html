@@ -23,49 +23,16 @@
   <body>
     <noscript> You need to enable JavaScript to run this app. </noscript>
     <div id="root"></div>
-    <div class="container-fluid bg-black">
-    <!-- <form
-      class="row justify-content-center"
+    <form
       name="Portfolio Contact Form"
-      method="POST"
-      data-netlify="true"
+      netlify
+      netlify-honeypot="bot-field"
+      hidden
     >
-      <div class="col-md-5 d-grid g-4 bg-light">
-        <h2 class="text-center text-dark display-1">Contact</h2>
-        <label name="fname">First Name
-          <input
-            name="fname"
-            id="fname"
-            class="mb-4 w-100"
-            label="First Name"
-            placeholder="First Name"
-          />
-        </label>
-
-        <input
-          name="lname"
-          id="lname"
-          required
-          class="mb-4 w-100"
-          label="Last Name"
-        />
-        <input
-          name="email"
-          type="email"
-          id="email"
-          class="mb-4 w-100"
-          label="Email address"
-        />
-        <textarea
-          name="message"
-          class="mb-4 w-100"
-          rows="4"
-          id="message"
-        ></textarea>
-        <button type="submit" class="btn btn-primary p-3 mb-4" block>
-          Send &nbsp;
-        </button>
-      </div>
-    </form> -->
+      <input type="text" name="fname" />
+      <input type="text" name="lname" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
   </body>
 </html>
