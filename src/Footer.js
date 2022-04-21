@@ -30,7 +30,8 @@ export default function Footer() {
         <MDBContainer>
           <form
             name="Portfolio Contact Form"
-            method="post"
+            method="POST"
+            data-netlify-recaptcha="true"
             className="row g-5 justify-content-center"
           >
             <input
