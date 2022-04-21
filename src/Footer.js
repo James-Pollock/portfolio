@@ -1,11 +1,29 @@
+import React, { useState } from "react";
 import {
   MDBContainer,
   MDBRow,
   MDBCol,
   MDBBtn,
   MDBIcon,
+  MDBInput,
+  MDBTextArea,
 } from "mdb-react-ui-kit";
+
 export default function Footer() {
+  const [formValue, setFormValue] = useState({
+    fname: "test",
+    lname: "test",
+    email: "test@tes.com",
+    phone: ""
+  });
+  const onChange = (e: any) => {
+    setFormValue({ ...formValue, [e.target.name]: e.target.value });
+  };
+
+  const submitForm = (e) => {
+    console.log(formValue)
+  }
+
   return (
     <>
       <MDBContainer
@@ -13,35 +31,60 @@ export default function Footer() {
         fluid
         className="position-relative vh-100 d-flex justify-content-center align-items-center"
       >
-        {
-          // <div className="title">Pollock</div>
-          // <div className="title-2">James</div>
-      }  
-      
         <MDBContainer>
-          <MDBRow className="justify-content-center">
-            <MDBCol
-              lg="7"
-              sm="12"
-              className="d-flex p-4 border-5 rounded flex-column"
-            >
-              <h2 className="text-center">Contact</h2>
-              <label name="name">Names</label>
-              <input type="text" />
-              <label name="email">Email</label>
-              <input type="text" />
-              <label name="phone">Phone</label>
-              <input type="text" />
-              <label name="comments">Comments</label>
-              <textarea type="text" />
-              <div className="text-center mt-4">
-                <MDBBtn color="light" type="submit">
-                  Send &nbsp;
-                  <MDBIcon far icon="paper-plane" className="ml-2" />
-                </MDBBtn>
-              </div>
-            </MDBCol>
-          </MDBRow>
+          <form className="row g-5 justify-content-center" name="contact" method="POST" data-netlify="true">
+            <div className="col-md-5 bg-light">
+              <h2 className="text-center text-dark display-1">Contact</h2>
+              <MDBInput
+                value={formValue.fname}
+                name="fname"
+                onChange={onChange}
+                id="fname"
+                required
+                size="lg"
+                className="mb-4"
+                label="First Name"
+              />
+              <MDBInput
+                value={formValue.lname}
+                name="lname"
+                onChange={onChange}
+                id="lname"
+                required
+                size="lg"
+                className="mb-4"
+                label="Last Name"
+              />
+              <MDBInput
+                value={formValue.email}
+                name="email"
+                onChange={onChange}
+                type="email"
+                required
+                size="lg"
+                id="email"
+                className="mb-4"
+                label="Email address"
+              />
+              <MDBTextArea
+                className="mb-4"
+                size="lg"
+                id="message"
+                rows={4}
+                label="Message"
+              />
+              <MDBBtn
+                type="submit"
+                size="lg"
+                className="mb-4"
+                onClick={submitForm}
+                block
+              >
+                Send &nbsp;
+                <MDBIcon far icon="paper-plane" className="ml-2" />
+              </MDBBtn>
+            </div>
+          </form>
         </MDBContainer>
         <MDBBtn
           tag="a"

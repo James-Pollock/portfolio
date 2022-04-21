@@ -84,8 +84,7 @@ export default function Hero() {
 
   return (
     <>
-     
-    <Navbar variants={navVariants} animate={controls} initial="hidden" />
+      <Navbar variants={navVariants} animate={controls} initial="hidden" />
       <MDBContainer
         id="hero"
         className="d-flex position-relative flex-column justify-content-center"
@@ -101,23 +100,10 @@ export default function Hero() {
           <MDBCol>
             <MDBRow className="justify-content-center align-items-center">
               <MDBCol size="12" lg="6" className="mb-4">
-                <MDBTypography
-                  style={{
-                    fontSize: "5rem",
-                    fontWeight: "bold",
-                    lineHeight: "5rem",
-                  }}
-                >
-                  I'm James
-                </MDBTypography>
-                <MDBTypography
-                  style={{
-                    fontSize: "2.5rem",
-                    fontWeight: "300",
-                    lineHeight: "5rem",
-                  }}
-                >
-                  A Front End Web Designer
+                <MDBTypography tag="h1">JP Pollock</MDBTypography>
+
+                <MDBTypography tag="p" variant="display-4">
+                  Front End Web Designer
                 </MDBTypography>
               </MDBCol>
               <MDBCol
@@ -129,10 +115,9 @@ export default function Hero() {
                 animate="visible"
                 className="hero-links"
               >
-                <div class="d-md-block d-grid gap-0 col-md-12 col-7 mx-auto">
+                <div className="d-md-block d-grid gap-0 col-md-12 col-7 mx-auto">
                   <HeroBtn
                     color="white"
-                    size="lg"
                     className="rounded-0 m-2"
                     variants={heroNavLinks}
                     href="#about"
@@ -141,7 +126,6 @@ export default function Hero() {
                   </HeroBtn>
                   <HeroBtn
                     color="white"
-                    size="lg"
                     className="rounded-0 m-2"
                     variants={heroNavLinks}
                     href="#projects"
@@ -150,7 +134,6 @@ export default function Hero() {
                   </HeroBtn>
                   <HeroBtn
                     color="white"
-                    size="lg"
                     className="rounded-0 m-2"
                     variants={heroNavLinks}
                     href="#resume"
@@ -159,7 +142,6 @@ export default function Hero() {
                   </HeroBtn>
                   <HeroBtn
                     color="white"
-                    size="lg"
                     className="rounded-0 m-2"
                     variants={heroNavLinks}
                     href="#contact"

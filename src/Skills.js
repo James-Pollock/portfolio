@@ -13,16 +13,16 @@ export default function Skills() {
               <h4 className="h3">Front-End</h4>
               <ul className="my-4">
                 <li>
-                  HTML <i class="fab fa-html5"></i>
+                  HTML <i className="fab fa-html5"></i>
                 </li>
                 <li>
-                  CSS <i class="fab fa-css3-alt"></i>
+                  CSS <i className="fab fa-css3-alt"></i>
                 </li>
                 <li>
-                  SASS <i class="fab fa-sass"></i>
+                  SASS <i className="fab fa-sass"></i>
                 </li>
                 <li>
-                  Javascript <i class="fab fa-js"></i>
+                  Javascript <i className="fab fa-js"></i>
                 </li>
                 <li>Bootstrap</li>
                 <li>Jquery</li>

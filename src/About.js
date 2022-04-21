@@ -28,12 +28,12 @@ export default function About() {
 
   return (
     <>
-    <MDBContainer
-    fluid
-    id="about"
-    className="bg-light position-relative pt-4"
-    >
-    <div id="about-bg"></div>
+      <MDBContainer
+        fluid
+        id="about"
+        className="bg-light position-relative pt-4"
+      >
+        <div id="about-bg"></div>
         <h2 className="text-center display-1 text-dark">About</h2>
         <MDBRow>
           <MDBCol>
