@@ -30,10 +30,12 @@ export default function Footer() {
         <MDBContainer>
           <form
             className="row g-5 justify-content-center"
-            name="contact"
+            name="Portfolio Contact Form"
             method="POST"
             data-netlify="true"
+            onSubmit="submit"
           >
+            <input type="hidden" name="form-name" value="Portfolio Contact Form" />
             <div className="col-md-5 bg-light">
               <h2 className="text-center text-dark display-1">Contact</h2>
               <MDBInput
