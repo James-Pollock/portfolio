@@ -31,7 +31,6 @@ export default function Footer() {
           <form
             name="Portfolio Contact Form"
             method="POST"
-            data-netlify-recaptcha="true"
             className="row g-5 justify-content-center"
           >
             <input
