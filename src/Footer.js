@@ -31,7 +31,7 @@ export default function Footer() {
           <form
             className="row g-5 justify-content-center"
             name="contact"
-            action="POST"
+            method="POST"
             data-netlify="true"
           >
             <div className="col-md-5 bg-light">
