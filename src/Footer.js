@@ -14,7 +14,7 @@ export default function Footer() {
     fname: "test",
     lname: "test",
     email: "test@tes.com",
-    phone: ""
+    message: ""
   });
   const onChange = (e: any) => {
     setFormValue({ ...formValue, [e.target.name]: e.target.value });
@@ -28,7 +28,12 @@ export default function Footer() {
         className="position-relative vh-100 d-flex justify-content-center align-items-center"
       >
         <MDBContainer>
-          <form className="row g-5 justify-content-center" name="contact" method="POST" netlify>
+          <form
+            className="row g-5 justify-content-center"
+            name="contact"
+            action="POST"
+            data-netlify="true"
+          >
             <div className="col-md-5 bg-light">
               <h2 className="text-center text-dark display-1">Contact</h2>
               <MDBInput
@@ -61,20 +66,18 @@ export default function Footer() {
                 id="email"
                 className="mb-4"
                 label="Email address"
-              />
-              <MDBTextArea
+                />
+                <MDBTextArea
+                value={formValue.message}
+                name="message"
+                onChange={onChange}
                 className="mb-4"
                 size="lg"
                 id="message"
                 rows={4}
                 label="Message"
               />
-              <MDBBtn
-                type="submit"
-                size="lg"
-                className="mb-4"
-                block
-              >
+              <MDBBtn type="submit" size="lg" className="mb-4" block>
                 Send &nbsp;
                 <MDBIcon far icon="paper-plane" className="ml-2" />
               </MDBBtn>
