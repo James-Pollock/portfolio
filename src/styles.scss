@@ -167,7 +167,8 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  background-image: linear-gradient(aqua,rgba(0, 255, 255, 0.03),#878D7E), url(../beach.jpg);
+  background-image: linear-gradient(rgba(5, 15, 26, .3333333333333333), rgba(58, 53, 71, .395)),
+      url(../beach.jpg);
   z-index: 1
 }
 
