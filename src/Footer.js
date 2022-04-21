@@ -28,7 +28,7 @@ export default function Footer() {
         className="position-relative vh-100 d-flex justify-content-center align-items-center"
       >
         <MDBContainer>
-          <form className="row g-5 justify-content-center" name="contact" method="POST" data-netlify="true">
+          <form className="row g-5 justify-content-center" name="contact" method="POST" netlify>
             <div className="col-md-5 bg-light">
               <h2 className="text-center text-dark display-1">Contact</h2>
               <MDBInput
