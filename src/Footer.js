@@ -16,7 +16,7 @@ export default function Footer() {
     email: "test@tes.com",
     message: ""
   });
-  const onChange = (e: any) => {
+  const onChange = (e) => {
     setFormValue({ ...formValue, [e.target.name]: e.target.value });
   };
 
@@ -29,11 +29,9 @@ export default function Footer() {
       >
         <MDBContainer>
           <form
+          name="Portfolio Contact Form"
+          method="post"
             className="row g-5 justify-content-center"
-            name="Portfolio Contact Form"
-            method="POST"
-            data-netlify="true"
-            onSubmit="submit"
           >
             <input type="hidden" name="form-name" value="Portfolio Contact Form" />
             <div className="col-md-5 bg-light">
@@ -79,7 +77,7 @@ export default function Footer() {
                 rows={4}
                 label="Message"
               />
-              <MDBBtn type="submit" size="lg" className="mb-4" block>
+              <MDBBtn type="submit" value="Submit Message" size="lg" className="mb-4" block>
                 Send &nbsp;
                 <MDBIcon far icon="paper-plane" className="ml-2" />
               </MDBBtn>
