@@ -29,11 +29,15 @@ export default function Footer() {
       >
         <MDBContainer>
           <form
-          name="Portfolio Contact Form"
-          method="post"
+            name="Portfolio Contact Form"
+            method="post"
             className="row g-5 justify-content-center"
           >
-            <input type="hidden" name="form-name" value="Portfolio Contact Form" />
+            <input
+              type="hidden"
+              name="form-name"
+              value="Portfolio Contact Form"
+            />
             <div className="col-md-5 bg-light">
               <h2 className="text-center text-dark display-1">Contact</h2>
               <MDBInput
@@ -66,8 +70,8 @@ export default function Footer() {
                 id="email"
                 className="mb-4"
                 label="Email address"
-                />
-                <MDBTextArea
+              />
+              <MDBTextArea
                 value={formValue.message}
                 name="message"
                 onChange={onChange}
@@ -77,7 +81,14 @@ export default function Footer() {
                 rows={4}
                 label="Message"
               />
-              <MDBBtn type="submit" value="Submit Message" size="lg" className="mb-4" block>
+              <div data-netlify-recaptcha="true"></div>
+              <MDBBtn
+                type="submit"
+                value="Submit Message"
+                size="lg"
+                className="mb-4"
+                block
+              >
                 Send &nbsp;
                 <MDBIcon far icon="paper-plane" className="ml-2" />
               </MDBBtn>
