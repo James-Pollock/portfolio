@@ -81,7 +81,7 @@ export default function Footer() {
                 rows={4}
                 label="Message"
               />
-              <div data-netlify-recaptcha="true"></div>
+              
               <MDBBtn
                 type="submit"
                 value="Submit Message"
