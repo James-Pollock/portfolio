@@ -32,7 +32,7 @@ export default function About() {
       <MDBContainer
         fluid
         id="about"
-        className="  position-relative"
+        className="py-4 position-relative"
       >
         <h2 className="text-center display-1 text-dark">About</h2>
         <MDBRow>

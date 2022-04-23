@@ -26,7 +26,7 @@
 
   #james {
     font-size: (($font-size * $ratio) * $ratio * $ratio * $ratio );
-    line-height: ($font-size * $ratio) * 3 !important;
+    line-height: ($font-size * $ratio) * 4 !important;
   }
 
   h1 {
@@ -204,7 +204,7 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
-  #james{font-size:16vw}
+  #james{font-size:15vw}
 }
 
 #hero {

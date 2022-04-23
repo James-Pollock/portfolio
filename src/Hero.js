@@ -101,7 +101,7 @@ export default function Hero() {
             opacity: 1,
             scale: 1,
             color: "rgb(81 97 119)",
-            textShadow: `0px 1px 1px #ffffff,
+            textShadow: `1px 1px 1px #ffffff,
             1px 2px ${textShadowColor},
             1px 3px ${textShadowColor},
             1px 4px ${textShadowColor},
@@ -118,7 +118,7 @@ export default function Hero() {
             1px 15px ${textShadowColor},
             1px 16px ${textShadowColor},
             1px 17px ${textShadowColor},
-            0 0 1px ${textShadowColor}`,
+            -5px 10px 10px #666`,
           }}
         >
           JP Pollock
