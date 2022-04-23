@@ -84,7 +84,9 @@ export default function Hero() {
       controls.start("hidden");
     }
   }, [controls, inView]);
-const textShadowColor = "#9B9EA1";
+
+  const textShadowColor = "#9B9EA1";
+
   return (
     <>
       <Navbar variants={navVariants} animate={controls} initial="hidden" />
@@ -132,8 +134,8 @@ const textShadowColor = "#9B9EA1";
             initial="hidden"
             className="w-100 align-items-center justify-content-center"
           >
-            <MDBCol size="12" lg="6">
-              <MDBTypography tag="h2" variant="display-4">
+            <MDBCol size="12" lg="6" >
+              <MDBTypography tag="h2" variant="display-6">
                 Front End Web Designer
               </MDBTypography>
             </MDBCol>
@@ -146,10 +148,9 @@ const textShadowColor = "#9B9EA1";
               animate="visible"
               className="hero-links"
             >
-              <div className="d-md-block d-grid gap-0 col-md-12 col-7 mx-auto">
+              <div className="d-md-block d-grid gap-0 col-md-12 col-11 mx-auto">
                 <HeroBtn
                   color="white"
-                  size="lg"
                   className="m-2"
                   variants={heroNavLinks}
                   href="#about"
@@ -158,7 +159,6 @@ const textShadowColor = "#9B9EA1";
                 </HeroBtn>
                 <HeroBtn
                   color="white"
-                  size="lg"
                   className="m-2"
                   variants={heroNavLinks}
                   href="#projects"
@@ -167,7 +167,6 @@ const textShadowColor = "#9B9EA1";
                 </HeroBtn>
                 <HeroBtn
                   color="white"
-                  size="lg"
                   className="m-2"
                   variants={heroNavLinks}
                   href="#resume"
@@ -176,7 +175,6 @@ const textShadowColor = "#9B9EA1";
                 </HeroBtn>
                 <HeroBtn
                   color="white"
-                  size="lg"
                   className="m-2"
                   variants={heroNavLinks}
                   href="#contact"
