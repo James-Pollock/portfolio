@@ -14,10 +14,12 @@ const navVariants = {
   visible: {
     opacity: 1,
     y: 0,
+    display:'initial'
   },
   hidden: {
     opacity: 0,
     y: 0,
+    display:'none',
     transition: {
       duration: 0.3,
     },
