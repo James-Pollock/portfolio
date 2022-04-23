@@ -1,79 +1,39 @@
-import React, { useState, useEffect, useRef } from "react";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import * as React from "react";
+import { useState, useRef, useLayoutEffect } from "react";
+import { images } from "./Images";
+import { motion, useViewportScroll, useTransform } from "framer-motion";
 
 
-export default function FloatingPictures() {
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const [ref, inView] = useInView();
-  const [banner, bannerInView] = useInView();
-  const animationControl = useAnimation();
-  
-  const variants = {
-    initial: {
-      opacity: 0,
-      y: "100px",
-    },
-    animate: {
-      opacity: 1,
-      y: `100px`,
-    },
-  };
+const ParallaxImage = ({ src, ...style }) => {
+  const [elementTop, setElementTop] = useState(0);
+  const ref = useRef(null);
+  const { scrollY } = useViewportScroll();
 
-  useEffect(() => {
-    if (inView) {
-      animationControl.start("animate");
-    } else {
-      animationControl.start("initial");
-    }
-  }, [animationControl, inView]);
+  const y = useTransform(scrollY, [elementTop, elementTop +3], [0, -1], {
+    clamp: false,
+  });
 
-  useEffect(() => {
-    if (bannerInView) {
-      animationControl.start("animate");
-    } else {
-      animationControl.start("initial");
-    }
-  }, [animationControl, bannerInView]);
-
-  const handleScroll = () => {
-    const position = window.pageYOffset;
-    setScrollPosition(position);
-    // console.log(position);
-    // console.log(bannerInView);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  useLayoutEffect(() => {
+    const element = ref.current;
+    setElementTop(element.offsetTop);
+  }, [ref]);
 
   return (
+    <div ref={ref} className="image-container">
+      <motion.div className="overlay" style={{ ...style, y }} />
+      <img src={src} alt="" />
+    </div>
+  );
+};
+
+export default function FloatingPictures() {
+  return (
     <>
-      <div>
-        <motion.div
-          ref={banner}
-          className="bg-warning"
-          variants={variants}
-          animate={animationControl}
-        >
-          <h1 className="text-dark">THIS IS SOME TEXT TO ANIMATE</h1>
-        </motion.div>
+      <div className="container" id="floating-images">
+        {images.map((image) => (
+          <ParallaxImage id={image.src} key={image.src} {...image} />
+        ))}
       </div>
     </>
   );
 }
-// <div ref={ref} className=" container-fluid bg-light">
-//   <motion.img
-//     variants={variants}
-//     animate={animationControl}
-//     initial={{ y: 100 }}
-//     className="img-fluid"
-//     style={{ maxWidth: "600px" }}
-//     src="fishing.jpg"
-//     alt=""
-//   />
-// </div>

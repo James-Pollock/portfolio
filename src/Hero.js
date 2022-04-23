@@ -31,8 +31,8 @@ const welcomeVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      delayChildren: 0.3,
-      staggerChildren: 0.2,
+      delayChildren: 0.01,
+      staggerChildren:.1,
       when: "beforeChildren",
       type: "spring",
       duration: 1,
@@ -49,13 +49,12 @@ const heroNav = {
   visible: {
     opacity: 1,
     transition: {
-      delayChildren: 0.1,
-      staggerChildren: 0.2,
+      delayChildren: 0.03,
+      staggerChildren: 0.03,
       when: "beforeChildren",
       type: "spring",
       stiffness: 200,
       bounce: 300,
-      delay: 0,
     },
   },
   hidden: {

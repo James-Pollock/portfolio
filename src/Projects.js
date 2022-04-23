@@ -1,5 +1,5 @@
 import { MDBContainer, MDBRow, MDBCol } from "mdb-react-ui-kit";
-import Cards from './Cards'
+// import Cards from './Cards'
 import Layouts from './Layouts'
 
 export default function Projects() {

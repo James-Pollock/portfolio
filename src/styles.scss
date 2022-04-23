@@ -17,7 +17,7 @@
 
   .title,
   .title-2,
-  #brand {
+  #brand{
     font-size: (($font-size * $ratio) * $ratio);
     line-height: ($font-size * $ratio) * 6 !important;
     margin-top: $margin;
@@ -25,7 +25,7 @@
   }
 
   #james {
-    font-size: (($font-size * $ratio) * $ratio * $ratio * $ratio );
+    font-size: (($font-size * $ratio) * $ratio * $ratio * $ratio);
     line-height: ($font-size * $ratio) * 4 !important;
   }
 
@@ -66,7 +66,7 @@
   ol,
   pre,
   table,
-  blockquote {
+  blockquote,overlay{
     margin-top: $margin;
     margin-bottom: $margin;
   }
@@ -204,12 +204,12 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
-  #james{font-size:15vw}
+  #james{font-size:14vw}
 }
 
 #hero {
   position:relative;
-  height:50vh;
+  height:60vh;
   color: #fff;
   text-align: center;
   @media screen and (max-width: 600px) {
@@ -227,21 +227,13 @@ body {
   }
 
 }
-
-
-.title-2 {
-  text-shadow: 10px 10px #000;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  font-weight: 500;
-  opacity: 0.02;
-  color: #fff;
-  z-index: -2;
+#about{
+  position: relative;
+  z-index:111;
+  background-color: #ffffff55;
 }
-
 #skills {
+  position:relative;
   background-color: #050F1A
 }
 

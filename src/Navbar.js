@@ -66,10 +66,20 @@ export default function Navbar(props) {
                 </MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href="#">Resume</MDBNavbarLink>
+                <MDBNavbarLink
+                  href="#"
+                  onClick={() => setShowNavRight(!showNavRight)}
+                >
+                  Resume
+                </MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href="#contact">Contact</MDBNavbarLink>
+                <MDBNavbarLink
+                  href="#contact"
+                  onClick={() => setShowNavRight(!showNavRight)}
+                >
+                  Contact
+                </MDBNavbarLink>
               </MDBNavbarItem>
             </MDBNavbarNav>
           </MDBCollapse>
