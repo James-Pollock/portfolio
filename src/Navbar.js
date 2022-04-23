@@ -25,10 +25,16 @@ export default function Navbar(props) {
         initial={props.initial}
         className="fixed-top topnav"
         expand="lg"
-        dark 
+        dark
       >
         <MDBContainer>
-          <MDBNavbarBrand href="#" style={{fontFamily: "'Orbitron',sans-serif",color: 'rgb(130, 248, 126)'}}>
+          <MDBNavbarBrand
+            href="#"
+            style={{
+              fontFamily: "'Orbitron',sans-serif",
+              color: "rgb(130, 248, 126)",
+            }}
+          >
             JPWeb.Tech
           </MDBNavbarBrand>
           <MDBNavbarToggler
@@ -44,16 +50,36 @@ export default function Navbar(props) {
           <MDBCollapse navbar show={showNavRight}>
             <MDBNavbarNav right fullWidth={false} className="mb-2 mb-lg-0">
               <MDBNavbarItem>
-                <MDBNavbarLink href="#projects">Projects</MDBNavbarLink>
+                <MDBNavbarLink
+                  href="#about"
+                  onClick={() => setShowNavRight(!showNavRight)}
+                >
+                  About
+                </MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href="#about">About</MDBNavbarLink>
+                <MDBNavbarLink
+                  href="#projects"
+                  onClick={() => setShowNavRight(!showNavRight)}
+                >
+                  Projects
+                </MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href="#">Resume</MDBNavbarLink>
+                <MDBNavbarLink
+                  href="#"
+                  onClick={() => setShowNavRight(!showNavRight)}
+                >
+                  Resume
+                </MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href="#contact">Contact</MDBNavbarLink>
+                <MDBNavbarLink
+                  href="#contact"
+                  onClick={() => setShowNavRight(!showNavRight)}
+                >
+                  Contact
+                </MDBNavbarLink>
               </MDBNavbarItem>
             </MDBNavbarNav>
           </MDBCollapse>

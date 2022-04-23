@@ -4,7 +4,7 @@ import Layouts from './Layouts'
 
 export default function Projects() {
   return (
-    <MDBContainer id="projects" fluid className="bg-light text-secondary py-4">
+    <MDBContainer id="projects" fluid className="bg-light text-secondary py-5">
       <MDBContainer className="position-relative">
         <h2 className="text-dark text-center display-1">Projects</h2>
         <MDBRow className="rounded text-dark bg-light align-items-center text-md-start text-center">
