@@ -29,7 +29,6 @@ export default function Skills() {
                 <li>React</li>
                 <li>Material UI</li>
                 <li>Framer Motion</li>
-                <li>GSAP</li>
                 <li>Vuejs</li>
               </ul>
             </MDBCol>

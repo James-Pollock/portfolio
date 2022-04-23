@@ -4,6 +4,7 @@ import { MDBContainer, MDBRow, MDBCol, MDBIcon } from "mdb-react-ui-kit";
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 import Skills from "./Skills";
+import FloatingPictures from "./FloatingPictures";
 
 const variants = {
   visible: {
@@ -31,9 +32,8 @@ export default function About() {
       <MDBContainer
         fluid
         id="about"
-        className="bg-light position-relative pt-4"
+        className=" bg-white position-relative"
       >
-        <div id="about-bg"></div>
         <h2 className="text-center display-1 text-dark">About</h2>
         <MDBRow>
           <MDBCol>
@@ -43,12 +43,12 @@ export default function About() {
                   <div className="w-100 text-center">
                     <img
                       alt="My profile picture"
-                      className="img-fluid rounded-9 float-sm-start float-none mx-auto mb-4 me-sm-4 mb-sm-2"
+                      className="img-fluid  img-thumbnail shadow float-sm-start float-none mx-auto mb-4 me-sm-4 mb-sm-2"
                       src="james.jpg"
                     />
                   </div>
                   <p className="mt-0">
-                    My love for technology started in the early 90's, and gaming
+                    <span className="h1">M</span>y love for technology started in the early 90's, and gaming
                     was the gateway drug. If you havent experienced a first
                     person shooter on a 56k modem, it is hard to appreciate what
                     a marvel the modern day web is.

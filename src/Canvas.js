@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion} from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 export default function Canvas() {
@@ -15,20 +15,21 @@ export default function Canvas() {
   }, [inView]);
 
   return (
-    <div className="container" ref={ref}>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className={draw ? "active" : ""}
-        width="100%"
-        height="100%"
-        viewBox="0 0 800 600"
-      >
-        <path
-          id="Selection #1"
-          fill="none"
-          stroke="black"
-          stroke-width="1"
-          d="M 266.00,213.00
+    <>
+      <div className="container svg-wrapper" ref={ref}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className={draw ? "active" : ""}
+          width="100%"
+          height="100%"
+          viewBox="0 0 800 600"
+        >
+          <path
+            id="Selection #1"
+            fill="none"
+            stroke="black"
+            stroke-width="1"
+            d="M 266.00,213.00
            C 266.00,213.00 253.15,246.00 253.15,246.00
              248.79,261.94 251.20,266.65 248.63,277.00
              247.42,281.84 244.30,293.14 238.00,293.14
@@ -154,9 +155,10 @@ export default function Canvas() {
              395.55,375.85 398.85,382.96 405.98,380.26
              413.90,377.26 415.08,366.17 415.00,359.00
              414.83,344.36 406.29,332.91 399.00,321.00 Z"
-          className="svg-elem-1"
-        ></path>
-      </svg>
-    </div>
+            className="svg-elem-1"
+          ></path>
+        </svg>
+      </div>
+    </>
   );
 }

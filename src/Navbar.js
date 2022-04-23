@@ -23,10 +23,9 @@ export default function Navbar(props) {
         variants={props.variants}
         animate={props.animate}
         initial={props.initial}
-        className="topnav"
+        className="fixed-top topnav"
         expand="lg"
-        dark
-        sticky
+        dark 
       >
         <MDBContainer>
           <MDBNavbarBrand href="#" style={{fontFamily: "'Orbitron',sans-serif",color: 'rgb(130, 248, 126)'}}>
