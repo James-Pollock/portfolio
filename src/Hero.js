@@ -170,7 +170,7 @@ export default function Hero() {
                   color="white"
                   className="m-2"
                   variants={heroNavLinks}
-                  href="#resume"
+                  href="../doc/Resume.pdf"
                 >
                   Resume
                 </HeroBtn>

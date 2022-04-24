@@ -67,7 +67,7 @@ export default function Navbar(props) {
               </MDBNavbarItem>
               <MDBNavbarItem>
                 <MDBNavbarLink
-                  href="../public/doc/Resume.pdf"
+                  href="../doc/Resume.pdf"
                 >
                   Resume
                 </MDBNavbarLink>
