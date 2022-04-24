@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import {
   MDBTypography,
   MDBBtn,
@@ -14,12 +14,12 @@ const navVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    display:'initial'
+    display: "initial",
   },
   hidden: {
     opacity: 0,
     y: 0,
-    display:'none',
+    display: "none",
     transition: {
       duration: 0.3,
     },
@@ -32,7 +32,7 @@ const welcomeVariants = {
     y: 0,
     transition: {
       delayChildren: 0.01,
-      staggerChildren:.1,
+      staggerChildren: 0.1,
       when: "beforeChildren",
       type: "spring",
       duration: 1,
@@ -92,38 +92,6 @@ export default function Hero() {
     <>
       <Navbar variants={navVariants} animate={controls} initial="hidden" />
       <section id="hero-wrapper">
-        <motion.h1
-          id="james"
-          initial={{
-            opacity: 0,
-            scale: 0,
-          }}
-          animate={{
-            opacity: 1,
-            scale: 1,
-            color: "rgb(81 97 119)",
-            textShadow: `1px 1px 1px #ffffff,
-            1px 2px ${textShadowColor},
-            1px 3px ${textShadowColor},
-            1px 4px ${textShadowColor},
-            1px 5px ${textShadowColor},
-            1px 6px ${textShadowColor},
-            1px 7px ${textShadowColor},
-            1px 8px ${textShadowColor},
-            1px 9px ${textShadowColor},
-            1px 10px ${textShadowColor},
-            1px 11px ${textShadowColor},
-            1px 12px ${textShadowColor},
-            1px 13px ${textShadowColor},
-            1px 14px ${textShadowColor},
-            1px 15px ${textShadowColor},
-            1px 16px ${textShadowColor},
-            1px 17px ${textShadowColor},
-            -5px 10px 10px #666`,
-          }}
-        >
-          JP Pollock
-        </motion.h1>
         <MDBContainer
           id="hero"
           className="d-flex justify-content-center align-items-center"
@@ -135,7 +103,39 @@ export default function Hero() {
             initial="hidden"
             className="w-100 align-items-center justify-content-center"
           >
-            <MDBCol size="12" lg="6" >
+            <MDBCol size="12" lg="6">
+              <motion.h1
+                id="james"
+                initial={{
+                  opacity: 0,
+                  scale: 0,
+                }}
+                animate={{
+                  opacity: 1,
+                  scale: 1,
+                  color: "rgb(81 97 119)",
+                  textShadow: `1px 1px 1px #ffffff,
+                  1px 2px ${textShadowColor},
+                  1px 3px ${textShadowColor},
+                  1px 4px ${textShadowColor},
+                  1px 5px ${textShadowColor},
+                  1px 6px ${textShadowColor},
+                  1px 7px ${textShadowColor},
+                  1px 8px ${textShadowColor},
+                  1px 9px ${textShadowColor},
+                  1px 10px ${textShadowColor},
+                  1px 11px ${textShadowColor},
+                  1px 12px ${textShadowColor},
+                  1px 13px ${textShadowColor},
+                  1px 14px ${textShadowColor},
+                  1px 15px ${textShadowColor},
+                  1px 16px ${textShadowColor},
+                  1px 17px ${textShadowColor},
+                  -5px 10px 10px #666`,
+                }}
+              >
+                JP Pollock
+              </motion.h1>
               <MDBTypography tag="h2" variant="display-6">
                 Front End Web Designer
               </MDBTypography>
@@ -182,10 +182,10 @@ export default function Hero() {
                 >
                   Contact
                 </HeroBtn>
-              </div>
-            </MDBCol>
-          </WelcomeMotionRow>
-        </MDBContainer>
+                </div>
+                </MDBCol>
+                </WelcomeMotionRow>
+                </MDBContainer>
       </section>
     </>
   );

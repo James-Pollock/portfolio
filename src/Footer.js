@@ -11,9 +11,9 @@ import {
 
 export default function Footer() {
   const [formValue, setFormValue] = useState({
-    fname: "test",
-    lname: "test",
-    email: "test@tes.com",
+    fname: "",
+    lname: "",
+    email: "",
     message: ""
   });
   const onChange = (e) => {

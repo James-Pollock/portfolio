@@ -1,0 +1,291 @@
+// @import "node_modules/mdb-react-ui-kit/dist/scss/bootstrap/bootstrap.scss";
+
+/* ------ The Mixin ------ */
+@mixin typography($font-size) {
+  $base-line-height: $font-size * $ratio;
+  $margin: $base-line-height;
+
+  body {
+    font-size: $font-size;
+    line-height: ($font-size * $ratio);
+  }
+
+  form label {
+    font-size: initial;
+    line-height: initial;
+  }
+
+  .title,
+  .title-2,
+  #brand{
+    font-size: (($font-size * $ratio) * $ratio);
+    line-height: ($font-size * $ratio) * 6 !important;
+    margin-top: $margin;
+    margin-bottom: $margin;
+  }
+
+  #james {
+    font-size: (($font-size * $ratio) * $ratio * $ratio);
+    line-height: ($font-size * $ratio) * 2 !important;
+  }
+
+  h1 {
+    font-size: ((($font-size * $ratio) * $ratio) * $ratio);
+    line-height: ($font-size * $ratio) * 3;
+    margin-top: $margin * 2;
+    margin-bottom: $margin;
+  }
+
+  h2 {
+    font-size: (($font-size * $ratio) * $ratio);
+    line-height: ($font-size * $ratio) * 2;
+    margin-top: $margin;
+    margin-bottom: $margin;
+  }
+
+  h3 {
+    font-size: $font-size * $ratio;
+    line-height: ($font-size * $ratio);
+    margin-top: $margin;
+    margin-bottom: $margin;
+  }
+
+  h4 {
+    font-size: $font-size;
+    line-height: ($font-size * $ratio);
+    margin-top: $margin;
+    margin-bottom: $margin;
+  }
+
+  h5 {
+    font-size: $font-size;
+  }
+
+  p,
+  ul,
+  ol,
+  pre,
+  table,
+  blockquote,overlay{
+    margin-top: $margin;
+    margin-bottom: $margin;
+  }
+
+}
+
+/* ------ The Set Up ------ */
+//Step 1) Pick your ratio
+//example: 1.618 = Golden Ratio
+$ratio: 1.618;
+
+//Step 2) Pick your base font size per breakpoint using the mixin
+//example: @include typography(16px);
+
+//0 - first breakpoint
+@media (max-width: 299px) {
+  @include typography(12px);
+}
+
+//start of mobile first breakpoints
+@media (min-width: 300px) {
+  @include typography(14px);
+}
+
+@media (min-width: 600px) {
+  @include typography(15px);
+}
+
+@media (min-width: 800px) {
+  @include typography(16px);
+}
+
+@media (min-width: 1000px) {
+  @include typography(19px);
+}
+
+@media (min-width: 1200px) {
+  @include typography(21px);
+}
+
+@media (min-width: 1400px) {
+  @include typography(23px);
+}
+
+@media (min-width: 1600px) {
+  @include typography(25px);
+}
+
+/* ------ Demo styles ------ */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+p,
+ul,
+ol,
+pre,
+table,
+blockquote,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  transition: all 200ms ease-in-out;
+}
+
+code {
+  background: #ccc;
+  display: inline-block;
+}
+
+pre,
+code {
+  width: 100%;
+}
+
+pre {
+  margin: 1em;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased !important;
+  text-rendering: optimizelegibility;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: rgb(130, 248, 126);
+  width: 100%;
+  position: relative;
+}
+
+#brand {
+  font-family: 'Orbitron', sans-serif;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  color: #fff;
+  text-shadow: 1px 1px 10px #000000;
+  opacity: 0.1;
+}
+
+#hero-wrapper {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-image: linear-gradient(rgba(5, 15, 26, .3333333333333333), rgba(58, 53, 71, .395)),
+    url(../img/beach.jpg);
+    @media screen and (max-width:600px){
+      background-size: fill;
+    }
+}
+
+#james {
+  text-align: center;
+ 
+  margin:0 0 55px 0;
+  color: #aeaeae;
+}
+
+
+#hero {
+  position:relative;
+  height:80vh;
+  color: #fff;
+  text-align: center;
+  @media screen and (max-width: 600px) {
+    height:100vh;
+     h2{
+      font-size:25px!important;
+      margin-bottom:30px
+    }
+  }
+}
+
+.hero-links {
+  position: relative;
+  ul {
+    list-style: none;
+  }
+
+}
+#about{
+  position: relative;
+  z-index:111;
+  background-color: #ffffff55;
+}
+#skills {
+  position:relative;
+  background-color: #050F1A
+}
+
+.content {
+  background-color: rgb(238, 225, 225);
+  color: #000;
+  border-radius: 2rem;
+  border-top: 3rem solid rgb(0, 0, 0);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.55);
+  padding: 1rem;
+}
+
+#projects {
+  a {
+    img {
+      &:hover {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
+      }
+    }
+  }
+
+}
+
+#contact {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask3222%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='url(%23SvgjsLinearGradient3223)'%3e%3c/rect%3e%3cpath d='M 0%2c132 C 288%2c191.8 1152%2c371.2 1440%2c431L1440 560L0 560z' fill='rgba(0%2c 0%2c 0%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask3222'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='15.28%25' y1='139.29%25' x2='84.72%25' y2='-39.29%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient3223'%3e%3cstop stop-color='rgba(14%2c 20%2c 27%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(0%2c 0%2c 0%2c 1)' offset='0.59'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.topnav {
+  background: rgb(5, 15, 26);
+  min-height: 50px;
+
+  ul {
+    font-size: initial;
+    line-height: unset;
+    margin-top: unset;
+    margin-bottom: unset;
+  }
+}
+
+
+svg .svg-elem-1 {
+  stroke-dashoffset: 3439.994384765625px;
+  stroke-dasharray: 3439.994384765625px;
+  -webkit-transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
+  transition: stroke-dashoffset 1s cubic-bezier(0.47, 0, 0.745, 0.715) 0s;
+}
+
+svg.active .svg-elem-1 {
+  stroke-dashoffset: 0;
+}
+
+.svg-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0
+}
