@@ -4,7 +4,7 @@ import { MDBContainer, MDBRow, MDBCol } from "mdb-react-ui-kit";
 export default function Skills() {
   return (
     <>
-      <MDBCol id="skills" className="py-5" size="12">
+      <MDBContainer fluid id="skills" className="py-5" size="12">
         <MDBContainer className="pb-5">
           <h2 className="text-center display-1">SKILLS</h2>
           <MDBRow>
@@ -53,7 +53,7 @@ export default function Skills() {
             <hr />
           </MDBRow>
         </MDBContainer>
-      </MDBCol>
+      </MDBContainer>
     </>
   );
 }
