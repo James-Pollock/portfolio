@@ -8,14 +8,11 @@ import Footer from "./Footer";
 export default function App() {
   return (
     <>
-   
       <Hero />
-        <About />
-        <Skills />
-        <Projects />
-  <Footer />
-    {/*
-*/}
+      <About />
+      <Skills />
+      <Projects />
+      <Footer />
     </>
   );
 }
