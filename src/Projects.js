@@ -1,12 +1,11 @@
 import { MDBContainer, MDBRow, MDBCol } from "mdb-react-ui-kit";
 
-
 export default function Projects() {
   return (
     <MDBContainer id="projects" fluid className="bg-light text-secondary py-5">
-      <MDBContainer className="position-relative">
+      <MDBContainer className="position-relative d-flex flex-column text-dark bg-light align-items-center text-center">
         <h2 className="text-dark text-center display-1">Projects</h2>
-        <MDBRow className="rounded text-dark bg-light align-items-center text-md-start text-center">
+        <MDBRow className="align-items-center my-5">
           <MDBCol md="6" className="px-3">
             <h3>Shopping Cart App</h3>
             <p className="text-muted">
@@ -19,8 +18,9 @@ export default function Projects() {
               <img alt="" className="img-fluid" src="shopping-cart.png" />
             </a>
           </MDBCol>
-          <div className="w-100 py-5"></div>
-          <MDBCol md="6" className="order-md-0 order-1 py-5">
+        </MDBRow>
+        <MDBRow className="align-items-center my-5">
+          <MDBCol md="6" className="py-5 order-md-0 order-1">
             <a href="https://color-theme.netlify.app">
               <img alt="" className="img-fluid" src="color-theme-app.png" />
             </a>
@@ -32,7 +32,8 @@ export default function Projects() {
               them on page elements.
             </p>
           </MDBCol>
-          <div className="w-100 py-5"></div>
+        </MDBRow>
+        <MDBRow className="align-items-center my-5">
           <MDBCol md="6" className="px-3">
             <h3>Marketing Material</h3>
             <p className="text-muted">
@@ -42,10 +43,9 @@ export default function Projects() {
           <MDBCol md="6" className="py-5">
             <a href="/edu/TAMUK-collage.jpg">
               <img alt="" className="img-fluid" src="/edu/TAMUK-collage.jpg" />
-              </a>
+            </a>
           </MDBCol>
         </MDBRow>
-        <div className="w-100 py-5"></div>
       </MDBContainer>
     </MDBContainer>
   );

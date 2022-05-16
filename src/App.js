@@ -8,13 +8,14 @@ import Footer from "./Footer";
 export default function App() {
   return (
     <>
+   
       <Hero />
-      <div className="container-fluid m-0 p-0" style={{ overflowX: "hidden" }}>
         <About />
         <Skills />
         <Projects />
-      </div>
-      <Footer />
+  <Footer />
+    {/*
+*/}
     </>
   );
 }
