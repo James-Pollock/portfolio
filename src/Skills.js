@@ -1,57 +1,100 @@
 import React from "react";
 import { MDBContainer, MDBRow, MDBCol } from "mdb-react-ui-kit";
+import { motion } from "framer-motion";
 
 export default function Skills() {
+  const MotionRow = motion(MDBRow);
+  const MotionCol = motion(MDBCol);
+  const variants = {
+    initial: {
+      y: 100,
+    },
+    animate: {
+      y: 0,
+      transition: {
+        staggerChildren: 0.03,
+        when: "beforeChildren",
+        type: "spring",
+        delay: 0,
+        stiffness: 200,
+        bounce: 300,
+      },
+    },
+  };
+  const colVariants = {
+    initial: {
+      y: 100,
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+    },
+  };
+
+  const skills = [
+    ["Front-End", ["HTML", "CSS", "SASS", "Javascript", "Bootstrap", "React"]],
+    [
+      "Back-End",
+      ["Apache Velocity", "Node.js", "Rest API", "Firebase", "Mongo DB"],
+    ],
+    ["Tools", ["Adobe CC", "VSCode", "Codesandbox", "GitHub", "Netlify"]],
+    [
+      "Management",
+      [
+        "Cascade CMS & Clive",
+        "Site Improve",
+        "WebAim",
+        "AXE",
+        "Google Analytics",
+      ],
+    ],
+  ];
   return (
     <>
       <MDBContainer fluid id="skills" className="py-5" size="12">
         <MDBContainer className="pb-5">
           <h2 className="text-center display-1">SKILLS</h2>
-          <MDBRow>
-            <hr />
-            <MDBCol size="6" md="3">
-              <h4 className="display-6">Front-End</h4>
-              <ul className="my-4">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>SASS</li>
-                <li>Javascript</li>
-                <li>Bootstrap</li>
-                <li>React</li>
-              </ul>
-            </MDBCol>
-            <MDBCol size="6" md="3">
-              <h4 className="display-6">Back-End</h4>
-              <ul className="mt-4">
-                <li>Apache Velocity</li>
-                <li>Rest API</li>
-                <li>Node.js</li>
-                <li>Firebase</li>
-                <li>Mongo DB</li>
-              </ul>
-            </MDBCol>
-            <MDBCol size="6" md="3">
-              <h4 className="display-6">Tools</h4>
-              <ul className="mt-4">
-                <li>Adobe CC</li>
-                <li>VSCode</li>
-                <li>Codesandbox</li>
-                <li>GitHub</li>
-                <li>Netlify</li>
-              </ul>
-            </MDBCol>
-            <MDBCol size="6" md="3">
-              <h4 className="display-6">Management</h4>
-              <ul className="mt-4">
-                <li>Cascade CMS &amp; Clive</li>
-                <li>Site Improve</li>
-                <li>WebAim</li>
-                <li>AXE</li>
-                <li>Google Analytics</li>
-              </ul>
-            </MDBCol>
-            <hr />
-          </MDBRow>
+          <motion.hr
+            className="mx-auto"
+            animate={{
+              width: "100%",
+              transition: {
+                duration: 1,
+              },
+            }}
+            initial={{ width: 0 }}
+          />
+          <MotionRow variants={variants} animate="animate" initial="initial">
+            {skills &&
+              skills.map((x, i) => (
+                <MotionCol
+                  key={i}
+                  variants={colVariants}
+                  size="6"
+                  md="3"
+                >
+                  <h3>
+                    {x[0]}
+                  </h3>
+                  <ul className="my-4">
+                    {x[1].map((xx, ii) => (
+                      <li>{xx}</li>
+                    ))}
+                  </ul>
+                </MotionCol>
+              ))}
+          </MotionRow>
+          <motion.hr
+            className="mx-auto"
+            animate={{
+              width: "100%",
+              transition: {
+                duration: 1,
+              },
+            }}
+            initial={{ width: 0 }}
+          />
         </MDBContainer>
       </MDBContainer>
     </>

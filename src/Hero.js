@@ -91,7 +91,11 @@ export default function Hero() {
   return (
     <>
       <Navbar variants={navVariants} animate={controls} initial="hidden" />
-      <section id="hero-wrapper">
+      <motion.section
+        id="hero-wrapper"
+        animate={{ opacity: 1,transition: {duration: 1.1 } }}
+        initial={{ opacity: 0 }}
+      >
         <MDBContainer
           id="hero"
           className="d-flex justify-content-center align-items-center"
@@ -182,11 +186,11 @@ export default function Hero() {
                 >
                   Contact
                 </HeroBtn>
-                </div>
-                </MDBCol>
-                </WelcomeMotionRow>
-                </MDBContainer>
-      </section>
+              </div>
+            </MDBCol>
+          </WelcomeMotionRow>
+        </MDBContainer>
+      </motion.section>
     </>
   );
 }
